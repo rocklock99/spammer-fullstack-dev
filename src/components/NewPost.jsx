@@ -19,15 +19,12 @@ export default function NewPost() {
       }),
     });
     const info = await response.json();
-    console.log(info);
-
     setPostText("");
     router.refresh();
   }
 
   function handleInputChanges(event) {
     setPostText(event.target.value);
-    console.log(postText);
   }
 
   return (

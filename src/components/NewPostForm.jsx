@@ -3,7 +3,7 @@ import { API } from "@/lib/api.js";
 import { useRouter } from "next/navigation.js";
 import { useState } from "react";
 
-export default function NewPost() {
+export default function NewPostForm() {
   const [postText, setPostText] = useState("");
   const router = useRouter();
 
@@ -29,10 +29,18 @@ export default function NewPost() {
 
   return (
     <form id="new-post-form" onSubmit={handleFormSubmit}>
-      <input type="text" value={postText} onChange={handleInputChanges} />
-      <button type="submit" id="create-post-button">
-        Submit Post
-      </button>
+      <textarea
+        id="new-post-text"
+        type="text"
+        value={postText}
+        placeholder="Write your post here..."
+        onChange={handleInputChanges}
+      ></textarea>
+      <div id="submit-button-container">
+        <button type="submit" id="create-post-button">
+          + Add a post
+        </button>
+      </div>
     </form>
   );
 }

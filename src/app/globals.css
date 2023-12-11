@@ -1,15 +1,121 @@
+* {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #15202b;
+  color: white;
+}
+
 #posts-container {
   display: flex;
   flex-direction: column;
   align-items: left;
   gap: 15px;
+  margin-top: 50px;
+  /* border: 1px solid green; */
 }
 
 .post-containers {
   display: flex;
-  border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
   width: 90%;
-  box-shadow: 5px 5px 10px grey;
+  background-color: #192734;
+  color: #ffffff;
+}
+
+.regular-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post-buttons-containers {
+  display: flex;
+  gap: 5px;
+}
+
+#new-post-form {
+  margin-top: 15px;
+  height: auto;
+  width: 90%;
+  padding: 10px;
+  /* border: 1px solid purple; */
+}
+
+#new-post-text,
+.edit-text-areas,
+.comment-text-areas {
+  min-width: 500px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  resize: none;
+  background-color: #f0f0f0;
+  border: 2px solid darkorange;
+  padding: 5px;
+}
+
+.edit-post-forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-buttons-containers {
+  display: flex;
+  gap: 5px;
+}
+
+.comment-buttons-containers {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-buttons-containers button,
+.comment-buttons-containers button {
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid darkorange;
+  background-color: darkorange;
+}
+
+.comments-containers {
+  margin-left: 100px;
+  /* border: 1px solid pink; */
+}
+
+.comments {
+  border-left: 2px solid #8899a6;
+  padding: 5px;
+}
+
+.add-like-buttons,
+.edit-buttons,
+.comment-buttons,
+.delete-buttons {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  background-color: #192734;
+  border: none;
+  color: white;
+}
+
+#submit-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+#create-post-button {
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  background-color: darkorange;
 }

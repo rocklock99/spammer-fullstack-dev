@@ -25,7 +25,7 @@ export default function Comments({ post, counter }) {
   // function call to fetchComments
   useEffect(() => {
     fetchComments();
-  }, [counter]);
+  }, [counter]); // replace counter with comments
 
   return (
     <div className="comments-containers">

@@ -1,5 +1,4 @@
 "use client";
-import { API } from "@/lib/api.js";
 import { useRouter } from "next/navigation.js";
 import { useEffect, useState } from "react";
 
@@ -7,9 +6,8 @@ export default function Comments({ post, counter }) {
   const [comments, setComments] = useState([]);
   const router = useRouter();
 
-  // function to get commments
   async function fetchComments() {
-    const response = await fetch(`${API}/api/posts/${post.id}/comments`, {
+    const response = await fetch(`/api/posts/${post.id}/comments`, {
       cache: "no-store",
     });
     const info = await response.json();
@@ -22,10 +20,9 @@ export default function Comments({ post, counter }) {
     }
   }
 
-  // function call to fetchComments
   useEffect(() => {
     fetchComments();
-  }, [counter]); // replace counter with comments
+  }, [counter]);
 
   return (
     <div className="comments-containers">

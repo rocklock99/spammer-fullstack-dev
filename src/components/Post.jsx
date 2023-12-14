@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import EditPostForm from "./EditPostForm.jsx";
 import NewCommentButton from "./NewCommentButton.jsx";
 import EditPostButton from "./EditPostButton.jsx";

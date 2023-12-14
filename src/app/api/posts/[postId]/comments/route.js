@@ -4,12 +4,6 @@ import { NextResponse } from "next/server.js";
 export async function GET(request, response) {
   try {
     const { postId } = response.params;
-    if (!postId) {
-      return NextResponse.json({
-        success: false,
-        error: "Post Id was not included in the request URL.",
-      });
-    }
     const comments = await prisma.comment.findMany({
       where: { postId },
     });
@@ -28,6 +22,13 @@ export async function POST(request, response) {
         error: "Post Id was not included in the request URL.",
       });
     }
+    // const foundPost = await prisma.post.findFirst({ where: { postId } });
+    // if (!foundPost) {
+    //   return NextResponse.json({
+    //     success: false,
+    //     error: "Post id not found in the database.",
+    //   });
+    // }
     const { text } = await request.json();
     if (!text) {
       return NextResponse.json({

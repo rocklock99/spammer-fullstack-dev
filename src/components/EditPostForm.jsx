@@ -1,6 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation.js";
-import { API } from "@/lib/api.js";
 import { useState } from "react";
 
 export default function EditPostForm({ post, setIsEditing }) {
@@ -18,7 +17,7 @@ export default function EditPostForm({ post, setIsEditing }) {
 
   async function handleFormSubmit(event) {
     event.preventDefault();
-    const response = await fetch(`${API}/api/posts/${post.id}`, {
+    const response = await fetch(`/api/posts/${post.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

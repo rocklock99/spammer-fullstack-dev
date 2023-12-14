@@ -1,13 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation.js";
-import { API } from "@/lib/api.js";
-import { useState } from "react";
 
 export default function AddLikeButton({ post }) {
   const router = useRouter();
   async function handleAddLikeButton() {
-    const response = await fetch(`${API}/api/posts/${post.id}/likes`, {
-      method: "POST",
+    const response = await fetch(`/api/posts/${post.id}/likes`, {
+      method: "PUT",
     });
     const info = await response.json();
     if (response.ok) {

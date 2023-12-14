@@ -42,6 +42,13 @@ export async function DELETE(request, response) {
         error: "Post Id was not included in the request URL.",
       });
     }
+    // const foundPost = await prisma.post.findFirst({ where: { postId } });
+    // if (!foundPost) {
+    //   return NextResponse.json({
+    //     success: false,
+    //     error: "Post id not found in the database.",
+    //   });
+    // }
     const deletedPost = await prisma.post.delete({
       where: { id: postId },
     });

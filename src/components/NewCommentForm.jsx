@@ -1,6 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation.js";
-import { API } from "@/lib/api.js";
 import { useState } from "react";
 
 export default function NewCommentForm({ post, setIsCommenting, setCounter }) {
@@ -18,7 +17,7 @@ export default function NewCommentForm({ post, setIsCommenting, setCounter }) {
 
   async function handleFormSubmit(event) {
     event.preventDefault();
-    const response = await fetch(`${API}/api/posts/${post.id}/comments`, {
+    const response = await fetch(`/api/posts/${post.id}/comments`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

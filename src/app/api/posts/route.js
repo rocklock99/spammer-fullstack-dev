@@ -2,8 +2,7 @@ import { prisma } from "@/lib/api.js";
 import { NextResponse } from "next/server.js";
 
 export async function GET(request, response) {
-  console.log(await request.json());
-  const posts = await prisma.post.findMany();
+  const posts = await prisma.post.findMany({ orderBy: { createdAt: "desc" } });
   try {
     return NextResponse.json({ success: true, posts });
   } catch (error) {

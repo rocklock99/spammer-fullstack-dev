@@ -1,21 +1,22 @@
 "use client";
-import { useState } from "react";
-import EditPostForm from "./EditPostForm.jsx";
-import NewCommentButton from "./NewCommentButton.jsx";
-import EditPostButton from "./EditPostButton.jsx";
-import DeletePostButton from "./DeletePostButton.jsx";
-import AddLikeButton from "./AddLikeButton.jsx";
-import NewCommentForm from "./NewCommentForm.jsx";
-import Comments from "./Comments.jsx";
+// import { useState } from "react";
+// import EditPostForm from "./EditPostForm.jsx";
+// import NewCommentButton from "./NewCommentButton.jsx";
+// import EditPostButton from "./EditPostButton.jsx";
+// import DeletePostButton from "./DeletePostButton.jsx";
+// import AddLikeButton from "./AddLikeButton.jsx";
+// import NewCommentForm from "./NewCommentForm.jsx";
+// import Comments from "./Comments.jsx";
 
 export default function Post({ post }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const [isCommenting, setIsCommenting] = useState(false);
-  const [counter, setCounter] = useState(0);
+  // const [isEditing, setIsEditing] = useState(false);
+  // const [isCommenting, setIsCommenting] = useState(false);
+  // const [counter, setCounter] = useState(0);
 
   return (
     <div className="post-containers">
-      {isEditing ? (
+      {post.text}
+      {/* {isEditing ? (
         <EditPostForm post={post} setIsEditing={setIsEditing} />
       ) : (
         <div className="regular-posts">
@@ -35,7 +36,7 @@ export default function Post({ post }) {
           )}
           <Comments post={post} counter={counter} />
         </div>
-      )}
+      )} */}
     </div>
   );
 }

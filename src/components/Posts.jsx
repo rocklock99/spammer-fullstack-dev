@@ -19,7 +19,7 @@ import Post from "./Post.jsx";
 
 export default async function Posts() {
   let posts = [];
-  const response = await fetch("http://localhost:3000/api/posts");
+  const response = await fetch("/api/posts");
   const postsResponse = await response.json();
   if (postsResponse.success) {
     console.log("Initial posts retrieval succeeded.");

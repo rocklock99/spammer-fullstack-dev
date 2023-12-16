@@ -9,9 +9,10 @@ export default function AddLikeButton({ post }) {
     });
     const info = await response.json();
     if (response.ok) {
+      console.log("Adding like succeeded.");
       router.refresh();
     } else {
-      console.log("Adding likes failed.");
+      console.log("Adding like failed.");
     }
   }
   return (

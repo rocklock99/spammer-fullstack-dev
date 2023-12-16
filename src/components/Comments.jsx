@@ -12,7 +12,7 @@ export default function Comments({ post, counter }) {
     });
     const info = await response.json();
     if (info.success) {
-      console.log("Fetching comments successful.");
+      console.log("Fetching comments succeeded.");
       setComments(info.comments);
       router.refresh();
     } else {

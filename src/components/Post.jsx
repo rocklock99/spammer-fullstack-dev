@@ -1,5 +1,5 @@
 "use client";
-// import { useState } from "react";
+import { useState } from "react";
 // import EditPostForm from "./EditPostForm.jsx";
 // import NewCommentButton from "./NewCommentButton.jsx";
 // import EditPostButton from "./EditPostButton.jsx";
@@ -9,9 +9,9 @@
 // import Comments from "./Comments.jsx";
 
 export default function Post({ post }) {
-  // const [isEditing, setIsEditing] = useState(false);
-  // const [isCommenting, setIsCommenting] = useState(false);
-  // const [counter, setCounter] = useState(0);
+  const [isEditing, setIsEditing] = useState(false);
+  const [isCommenting, setIsCommenting] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   return (
     <div className="post-containers">

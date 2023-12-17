@@ -18,8 +18,13 @@ export default function NewPostForm() {
       }),
     });
     const info = await response.json();
+    if (info.success) {
+      console.log("Adding post was successful.");
+      router.refresh();
+    } else {
+      console.log("Add post failed.");
+    }
     setPostText("");
-    router.refresh();
   }
 
   function handleInputChanges(event) {

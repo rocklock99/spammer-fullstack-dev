@@ -18,8 +18,7 @@ export default function NewPostForm() {
       }),
     });
     const info = await response.json();
-    console.log(info);
-    if (info.success) {
+    if (response.ok) {
       console.log("Adding post was successful.");
       router.refresh();
     } else {

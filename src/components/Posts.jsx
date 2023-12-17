@@ -47,7 +47,7 @@ import Post from "./Post.jsx";
 //     };
 //   }
 // }
-export default async function Feed() {
+export default async function Posts() {
   const posts = await prisma.post.findMany({
     orderBy: {
       createdAt: "desc",

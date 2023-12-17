@@ -18,14 +18,14 @@ export default function NewPostForm() {
       }),
     });
     const info = await response.json();
-    if (response.ok) {
-      console.log("Adding post was successful.");
-      router.refresh();
-    } else {
-      console.log("Add post failed.");
-    }
-    // console.log("Adding post was successful.");
+    // if (response.ok) {
+    //   console.log("Adding post was successful.");
     //   router.refresh();
+    // } else {
+    //   console.log("Add post failed.");
+    // }
+    console.log("Adding post was successful.");
+    router.refresh();
     setPostText("");
   }
 

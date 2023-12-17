@@ -24,6 +24,8 @@ export default function NewPostForm() {
     } else {
       console.log("Add post failed.");
     }
+    // console.log("Adding post was successful.");
+    //   router.refresh();
     setPostText("");
   }
 
